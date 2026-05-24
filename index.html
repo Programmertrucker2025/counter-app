@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counter App</title>
+  <style>
+    body {
+      background-color: navy;
+      font-family: Arial;
+    }
+
+    h1 {
+      color: silver;
+    }
+
+    p {
+      color: white;
+    }
+
+    button {
+      background-color: black;
+      color: green;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Counter</h1>
+  <p id="count">0</p>
+
+  <button onclick="increaseCount()">Add 1</button>
+  <button onclick="decreaseCount()">Subtract 1</button>
+  <button onclick="resetCount()">Reset</button>
+
+  <script>
+    let count = 0;
+
+    function updateScreen() {
+      document.getElementById("count").textContent = count;
+    }
+
+    function increaseCount() {
+      count = count + 1;
+      updateScreen();
+    }
+
+    function decreaseCount() {
+      count = count - 1;
+      updateScreen();
+    }
+
+    function resetCount() {
+      count = 0;
+      updateScreen();
+    }
+  </script>
+</body>
+</html>
